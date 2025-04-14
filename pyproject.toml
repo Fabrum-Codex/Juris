@@ -1,0 +1,23 @@
+[project]
+name = "juris"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Ajay P Sakthikumar",email = "codewizard001@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "qdrant-client (>=1.13.3,<2.0.0)",
+    "llama-index (>=0.12.30,<0.13.0)",
+    "pdfplumber (>=0.11.6,<0.12.0)",
+    "pydantic (>=2.11.3,<3.0.0)",
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn (>=0.34.1,<0.35.0)",
+    "python-dotenv (>=1.1.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
