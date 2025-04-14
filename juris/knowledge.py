@@ -1,11 +1,11 @@
 import os
 from dotenv import load_dotenv
 from tqdm import tqdm
-from juris.config import KNOWLEDGE_PATH, QDRANT_HOST, QDRANT_PORT
+from juris.config import EMBED_MODEL, KNOWLEDGE_PATH, QDRANT_HOST, QDRANT_PORT
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import fitz
-from langchain.vectorstores import Qdrant
-from langchain.embeddings import OllamaEmbeddings
+from langchain_community.vectorstores import Qdrant
+from langchain_community.embeddings import OllamaEmbeddings
 from langchain.schema.document import Document
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance
@@ -33,7 +33,7 @@ def load_knowledge():
 			vectors_config=VectorParams(size=768, distance=Distance.COSINE)
 		)
 
-	embedding_model = OllamaEmbeddings(model="nomic-embed-text")
+	embedding_model = OllamaEmbeddings(model=EMBED_MODEL)
 	documents = []
 	knowledgePaths = os.listdir(KNOWLEDGE_PATH)
 	for i, filePath in enumerate(tqdm(knowledgePaths, desc="Starting")):

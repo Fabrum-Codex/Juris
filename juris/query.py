@@ -1,6 +1,6 @@
 from langchain_ollama import OllamaLLM
 from langchain_qdrant import QdrantVectorStore
-from langchain.embeddings import OllamaEmbeddings
+from langchain_ollama.embeddings import OllamaEmbeddings
 from langchain.chains import RetrievalQA
 
 from juris.config import EMBED_MODEL, LLM_MODEL, QDRANT_HOST, QDRANT_PORT
