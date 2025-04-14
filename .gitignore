@@ -1,2 +1,9 @@
+# Data Folders
+# data/
+
 # Temporary Files
 tmp_*
+
+# Cache Files
+**/__pycache__
+**/.ipynb_checkpoints
