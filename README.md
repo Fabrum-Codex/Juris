@@ -83,12 +83,6 @@ python -m juris --query "What is the punishment for theft under Indian Penal Cod
 
 ---
 
-## 📄 License
-
-MIT License
-
----
-
 ## 👨‍💻 Maintained by
 
 **Fabrum Codex**  
