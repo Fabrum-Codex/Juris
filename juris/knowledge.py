@@ -10,6 +10,10 @@ from langchain.schema.document import Document
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance
 
+from juris.logging import get_logger
+
+logger = get_logger(__name__)
+
 client = QdrantClient(host=f"{QDRANT_HOST}", port=6333)
 
 def split_text(pages: list[str]) -> list[str]:
